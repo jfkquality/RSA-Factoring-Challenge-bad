@@ -1,0 +1,22 @@
+#!/env/bin/python3
+# Factorize all the things
+
+def factorize(filename=""):
+    with open(filename) as fp:
+        lines = len([i for i, line in enumerate(fp)])
+        print(lines)
+        # myfile.seek(0) # set file position to beginning b/c lines moves it to end
+        # if nblines <= 0 or nblines >= lines:
+        #     print(fp.read(), end='')
+        # else:
+        #     while nblines > 0:
+        #         print(fp.readline(), end='')
+        #         nblines -= 1
+        while lines > 0:
+            arg = fp.readline()
+            print(arg)
+            # while (arg % i++ != 0):
+            # print("{}={}*{}".format(arg, i, arg/i)
+            lines -= 1
+
+factorize(*args)
