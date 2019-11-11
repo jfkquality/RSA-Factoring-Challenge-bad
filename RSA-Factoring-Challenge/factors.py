@@ -6,9 +6,10 @@ import sys
 with open(sys.argv[1]) as fp:
 
     arg = fp.readline()
-    while arg != None:
+    while arg:
+        # print (arg)
         for i in range(2, int(arg) // 2):
             if (int(arg) % i == 0):
-                print("{}={}*{}".format(int(arg), i, int(arg) // i))
+                print("{}={}*{}".format(int(arg),int(arg) // i, i))
                 break
         arg = fp.readline()
